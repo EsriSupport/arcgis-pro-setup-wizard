@@ -9,7 +9,13 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.0.1
+
+The update prompt now downloads the new version directly when you click it,
+rather than opening a page first.
+
 ## 2.0.0
+
 
 First public release.
 
