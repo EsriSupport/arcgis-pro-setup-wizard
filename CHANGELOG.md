@@ -9,6 +9,40 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.0
+
+A design pass over every screen.
+
+**Keyboard.** Enter now moves the wizard on and Escape cancels, on every page.
+Every button has an access key — Alt+N for Next, Alt+B for Back, Alt+R for
+Re-check, and so on — so the whole wizard can be driven without a mouse.
+
+**The title bar is Esri blue** on Windows 11 instead of whatever accent colour
+the computer happens to be set to.
+
+**The table of checks is readable at any window size.** "Required" and "On this
+computer" had fixed widths and so were cut short however wide the window was;
+every column now takes a share of the space. Hovering a row shows the whole of
+it, so a narrow window is never a dead end.
+
+**Nothing is lost on a small window.** At the smallest size the wizard allowed,
+the list of what it was about to do collapsed to a single line. The table and
+that list now share the height between them.
+
+**Next waits for a setup file.** On an empty folder it used to lead to a page of
+green ticks measured against a version nobody had chosen.
+
+**Colour.** Three pieces of text were below the accessibility standard for
+contrast and have been darkened. "Will install" no longer uses the same blue
+that means "you can click this" everywhere else, and the preview notice is now
+informational blue rather than warning amber.
+
+**Smaller things.** Found and missing files are marked with a tick and a dash
+rather than plus and minus; the folder path shows in full on hover; captions are
+no longer smaller than the text they label; an empty patch list no longer stands
+as a large empty box; the components window can be resized and its button says
+what it does.
+
 ## 2.1.2
 
 The Install button is no longer offered when there is nothing to install.
