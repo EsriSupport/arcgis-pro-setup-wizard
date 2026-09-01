@@ -9,6 +9,22 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.5
+
+Installing an earlier ArcGIS Pro over a later one is now stopped rather than
+described as an upgrade.
+
+Choosing ArcGIS Pro 3.5 on a computer running 3.7 was reported as "this will
+upgrade the existing one" and allowed to start. It is a step backwards, not an
+upgrade, and ArcGIS Pro cannot be moved back to an earlier release in place —
+the setup will not install over a later version. The row now reads **Uninstall
+3.7 first** and says what to do instead: uninstall ArcGIS Pro, then run the
+wizard again.
+
+A genuine upgrade is unchanged, and now says which way it goes — "Upgrade 3.7
+to 3.10" rather than "Install 3.10 over 3.7". Version numbers are compared as
+numbers, so 3.10 is correctly newer than 3.7.
+
 ## 2.2.4
 
 Patches the computer already has are no longer applied a second time.
