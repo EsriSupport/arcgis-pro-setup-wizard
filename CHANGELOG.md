@@ -9,6 +9,22 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.8
+
+The patch list is now as tall as the patches in it. It was sized before the
+list had been filled, so it always used the previous contents — on the first
+scan, none of them — leaving three patches in a box built for none, with a
+scrollbar and an empty page beneath. It now grows a row at a time up to the
+room available, and only scrolls when there genuinely is not enough.
+
+The wizard's prompts wear the same Esri blue title bar as the wizard itself,
+instead of whatever accent colour the computer is set to.
+
+While installing, the line under the progress bars no longer relays Windows
+Installer's own diagnostics. Text like "Note: 1: 2205 2: 3: _RemoveFilePath"
+means nothing to anyone watching and reads like a failure; the log below keeps
+every line of it.
+
 ## 2.2.7
 
 Files belonging to an ArcGIS Pro extension are no longer mistaken for ArcGIS
