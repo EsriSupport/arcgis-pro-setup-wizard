@@ -11,233 +11,150 @@ of every screen — quote the whole line when contacting support.
 
 ## 2.2.9
 
-The What's new panel now understands a bulleted release note.
+The What's new panel understands a bulleted release note.
 
-It recognised the bullet characters markdown uses, but not the one people
-actually type — the round bullet an app store uses. A note written that way
-arrived as one long paragraph with the bullets swallowed into it. Round,
-middle and hollow bullets, en and em dashes all now start a line of their own.
-
-This matters from the next release onward, not this one: the panel is drawn by
-the version you are running, so notes are only read this way once the wizard
-doing the reading is 2.2.9 or later.
+- Fixed: it knew the bullet characters markdown uses but not the round bullet people type, so a note written that way arrived as one long paragraph
+- Round, middle and hollow bullets and en and em dashes each start a line of their own
 
 ## 2.2.8
 
-The patch list is now as tall as the patches in it. It was sized before the
-list had been filled, so it always used the previous contents — on the first
-scan, none of them — leaving three patches in a box built for none, with a
-scrollbar and an empty page beneath. It now grows a row at a time up to the
-room available, and only scrolls when there genuinely is not enough.
+The patch list is as tall as the patches in it.
 
-The wizard's prompts wear the same Esri blue title bar as the wizard itself,
-instead of whatever accent colour the computer is set to.
-
-While installing, the line under the progress bars no longer relays Windows
-Installer's own diagnostics. Text like "Note: 1: 2205 2: 3: _RemoveFilePath"
-means nothing to anyone watching and reads like a failure; the log below keeps
-every line of it.
+- Fixed: the list was laid out before it was filled, so three patches went into a box built for none, with a scrollbar and an empty page beneath
+- It now grows a row at a time, between one row and the room available
+- Fixed: while installing, the line under the progress bars relayed Windows Installer's own diagnostics - text like "Note: 1: 2205 2: 3: _RemoveFilePath" reads like a failure; the log below keeps every line
+- The wizard's prompts wear the same Esri blue title bar as the wizard itself
 
 ## 2.2.7
 
-Files belonging to an ArcGIS Pro extension are no longer mistaken for ArcGIS
-Pro's own.
+An extension's files are no longer mistaken for ArcGIS Pro's own.
 
-Esri names an add-on after the product it extends, so Reality Studio arrives as
-`ArcGISPro_34_Reality_Ext_192545.exe` with a patch called
-`ArcGISPro_341_Reality_Ext_192546.msp`. The wizard was offering that setup as a
-version of ArcGIS Pro to install, and offering its patch **whatever** version
-you chose — it could not read a version out of a name in that shape, and a
-patch with no version was treated as belonging to all of them.
-
-The rule now is that ArcGIS Pro's own files carry nothing after the name but a
-version and a build number. A word in there means the file belongs to something
-else, so it is left out — and the note beneath the patch list says one was left
-out, rather than dropping it in silence.
-
-The check that a patch belongs to the version being installed is now made where
-the installation plan is built, as well as on the page that lists them.
+- Fixed: Reality Studio ships as ArcGISPro_34_Reality_Ext_192545.exe and was offered as a version of ArcGIS Pro to install
+- Fixed: its patch was offered whatever version you chose, because no version number could be read from a name in that shape
+- ArcGIS Pro's own files carry nothing after the name but a version and a build number; a word in there means the file belongs to something else
+- The note beneath the patch list says when a file has been left out, rather than dropping it in silence
 
 ## 2.2.6
 
-Findings from a second pass over every screen.
+Wording and appearance fixes.
 
-The last screen, after a preview run, told you to "run this app again as
-Administrator with the preview box unticked" — a checkbox removed from the
-wizard some time ago. It now says what is actually true: start it again and
-choose Yes when Windows asks for permission.
-
-The components window has caught up with the rest of the app: its title bar is
-Esri blue rather than whatever accent colour the computer is set to, it no
-longer carries a stray icon, and a component's description is written in the
-ordinary text colour instead of the blue that means "you can click this".
-
-The update button is the last one in the wizard to gain an access key.
+- Fixed: after a preview run, the last screen told you to untick a preview box that had been removed from the wizard
+- Fixed: a component's description was written in the blue that means "you can click this"
+- The components window's title bar is Esri blue rather than the computer's accent colour, and it no longer carries a stray icon
+- The update button has an access key
 
 ## 2.2.5
 
-Installing an earlier ArcGIS Pro over a later one is now stopped rather than
-described as an upgrade.
+Installing an earlier ArcGIS Pro over a later one is stopped.
 
-Choosing ArcGIS Pro 3.5 on a computer running 3.7 was reported as "this will
-upgrade the existing one" and allowed to start. It is a step backwards, not an
-upgrade, and ArcGIS Pro cannot be moved back to an earlier release in place —
-the setup will not install over a later version. The row now reads **Uninstall
-3.7 first** and says what to do instead: uninstall ArcGIS Pro, then run the
-wizard again.
-
-A genuine upgrade is unchanged, and now says which way it goes — "Upgrade 3.7
-to 3.10" rather than "Install 3.10 over 3.7". Version numbers are compared as
-numbers, so 3.10 is correctly newer than 3.7.
+- Fixed: choosing 3.5 on a computer running 3.7 was reported as an upgrade and allowed to start
+- ArcGIS Pro cannot be moved back to an earlier release in place: uninstall ArcGIS Pro first, then run the wizard again
+- A genuine upgrade now says which way it goes - "Upgrade 3.7 to 3.10"
+- Version numbers are compared as numbers, so 3.10 is correctly newer than 3.7
 
 ## 2.2.4
 
 Patches the computer already has are no longer applied a second time.
 
-ArcGIS Pro records its patch level in its own version: 3.7.1.1904 means patch
-3.7.1 went on long ago. The wizard was offering that patch again anyway,
-costing twenty minutes and ending in "not applicable". Where the base
-installation is being skipped because the right version is already there, any
-patch the installed version already covers is now skipped too, and the row says
-so.
-
-Newer patches are unaffected — a 3.7.2 patch still goes on over 3.7.1. Ticking
-the box that reinstalls ArcGIS Pro puts the base version back and every patch
-with it, which is the way to apply one again deliberately.
+- Fixed: ArcGIS Pro 3.7.1.1904 already includes patch 3.7.1, and the wizard offered it again - twenty minutes ending in "not applicable"
+- Any patch the installed version already covers is skipped, and the row says so
+- Newer patches are unaffected: a 3.7.2 patch still goes on over 3.7.1
+- Ticking the box that reinstalls ArcGIS Pro puts the base version back and every patch with it
 
 ## 2.2.3
 
-Cancel and Escape now ask before throwing anything away.
+Cancel and Escape ask before discarding anything.
 
-Once past the welcome screen, closing the wizard — by the Cancel button, by
-Escape, by the window's X, or by Alt+F4 — asks first, with **No** as the
-default. Escape in particular is a key people press to dismiss things, and
-since 2.2.0 it has been able to close the wizard; it should not have been able
-to discard a chosen folder, patches and components without a word. The welcome
-screen still closes without asking, because nothing has been chosen there yet.
-
-Nothing changes during an installation: that was already protected, and still
-is. Stop asks for confirmation, waits for the current step to finish, and
-closing the window outright is refused.
-
-**Fixed:** in the components window, "Use standard" wrote straight through to
-the selection, so opening it, pressing that, and then pressing Cancel changed
-the components anyway. Nothing leaves that window now except through **Use
-these components**.
+- Past the welcome screen, closing the wizard - by Cancel, by Escape, by the window's X or by Alt+F4 - asks first, with No as the default
+- The welcome screen still closes without asking, because nothing has been chosen there yet
+- Installation is unchanged: Stop asks for confirmation, waits for the current step to finish, and closing the window outright is refused
+- Fixed: "Use standard" in the components window wrote straight through to the selection, so Cancel afterwards did not undo it
 
 ## 2.2.2
 
-The arrow on the release notes button now points the way the panel moves.
+The arrow on the release notes button points the way the panel moves.
 
-The notice sits at the bottom of the window and grows upward, so **What's new**
-carries an up arrow and **Hide notes** a down one — the way a drawer handle
-works. It had them the other way round, following the convention for a panel
-that drops its content below the button, which is not what this one does.
+- Fixed: the arrows were the other way round, following the convention for a panel that drops its content below the button
+- The notice sits at the bottom of the window and grows upward, so What's new carries an up arrow and Hide notes a down one
 
 ## 2.2.1
 
-The release notes panel was the one screen the design pass missed.
+Fixes to the release notes panel.
 
-Paragraph breaks in the notes were being collapsed, so what should have been
-readable paragraphs arrived as a wall of text. The panel can now be reached and
-scrolled from the keyboard, **What's new** has an access key like every other
-button, and it shows whole lines rather than slicing one through the middle.
+- Fixed: paragraph breaks were collapsed, so notes arrived as a wall of text
+- Fixed: the panel sliced its last line through the middle rather than showing whole lines
+- The panel can be reached and scrolled from the keyboard
+- What's new has an access key, like every other button
+- The documentation that ships with the wizard now covers the keyboard shortcuts and the update check
 
 ## 2.2.0
 
-A design pass over every screen.
+Keyboard control, an Esri blue title bar, and a screen that holds together at any window size.
 
-**Keyboard.** Enter now moves the wizard on and Escape cancels, on every page.
-Every button has an access key — Alt+N for Next, Alt+B for Back, Alt+R for
-Re-check, and so on — so the whole wizard can be driven without a mouse.
-
-**The title bar is Esri blue** on Windows 11 instead of whatever accent colour
-the computer happens to be set to.
-
-**The table of checks is readable at any window size.** "Required" and "On this
-computer" had fixed widths and so were cut short however wide the window was;
-every column now takes a share of the space. Hovering a row shows the whole of
-it, so a narrow window is never a dead end.
-
-**Nothing is lost on a small window.** At the smallest size the wizard allowed,
-the list of what it was about to do collapsed to a single line. The table and
-that list now share the height between them.
-
-**Next waits for a setup file.** On an empty folder it used to lead to a page of
-green ticks measured against a version nobody had chosen.
-
-**Colour.** Three pieces of text were below the accessibility standard for
-contrast and have been darkened. "Will install" no longer uses the same blue
-that means "you can click this" everywhere else, and the preview notice is now
-informational blue rather than warning amber.
-
-**Smaller things.** Found and missing files are marked with a tick and a dash
-rather than plus and minus; the folder path shows in full on hover; captions are
-no longer smaller than the text they label; an empty patch list no longer stands
-as a large empty box; the components window can be resized and its button says
-what it does.
+- New: Enter moves the wizard on and Escape cancels, on every page
+- New: every button has an access key - Alt+N for Next, Alt+B for Back, Alt+R for Re-check
+- The title bar is Esri blue on Windows 11 rather than whatever accent colour the computer is set to
+- Fixed: "Required" and "On this computer" had fixed widths and were cut short however wide the window was; every column now takes a share of the space, and hovering a row shows the whole of it
+- Fixed: at the smallest size the wizard allowed, the list of what it was about to do collapsed to a single line
+- Fixed: Next led to a page of green ticks when no setup file had been chosen
+- Fixed: three pieces of text were below the contrast standard for readability
+- "Will install" no longer uses the same blue that means "you can click this", and the preview notice is informational blue rather than warning amber
+- Found and missing files are marked with a tick and a dash rather than a plus and a minus
+- The folder path shows in full on hover, and an empty patch list no longer stands as a large empty box
+- The components window can be resized, and its button says what it does
 
 ## 2.1.2
 
-The Install button is no longer offered when there is nothing to install.
+Install is no longer offered when there is nothing to install.
 
-Where ArcGIS Pro and everything it needs are already on the computer, Install
-is now unavailable and the reason is written beside it — "ArcGIS Pro 3.7 is
-already installed. Tick the box to install it again." Pressing it used to be
-allowed, and answered with a message box saying there was nothing to do. The
-summary now describes the reinstall too, instead of still reporting that
-nothing is left to install.
-
-The note along the bottom of the window also widens with the window, so a
-longer message is no longer cut short.
+- Fixed: pressing Install with everything already in place was allowed, and answered with a message box saying there was nothing to do
+- Install is now unavailable, with the reason beside it: "ArcGIS Pro 3.7 is already installed. Tick the box to install it again."
+- Fixed: the summary still said nothing was left to install after a reinstall had been ticked
+- The note along the bottom widens with the window, so a longer message is not cut short
 
 ## 2.1.1
 
-Appearance fixes on the "Before installing" screen and the update notice.
+Appearance fixes on the Before installing screen and the update notice.
 
-The table of checks had no top border: the message above it was tall enough to
-cover it. The download button now sizes itself to what it says, so a caption
-like "Download .NET 6.0 (x64)" no longer wraps across two lines inside it. The
-update notice no longer repeats which version you are running — that is already
-along the bottom of every screen — and its buttons now sit level with the text
-whether the notes are open or closed. Release notes that were hard-wrapped when
-they were written are re-flowed to the width of the panel instead of breaking
-mid-sentence, and each version's notes are now indented as a block beneath the
-version number — wrapped lines included — with the version itself in bold, so
-the two can be told apart at a glance.
+- Fixed: the table of checks had no top border - the message above it was tall enough to cover it
+- Fixed: a caption like "Download .NET 6.0 (x64)" wrapped across two lines inside its button; the button now sizes itself to what it says
+- Fixed: release notes hard-wrapped when they were written broke mid-sentence instead of re-flowing to the panel
+- The update notice no longer repeats which version you are running - that is already along the bottom of every screen
+- Notice buttons sit level with the text whether the notes are open or closed
+- Each version's notes are indented beneath the version number, wrapped lines included, with the version in bold
 
 ## 2.1.0
 
-The update notice can now show everything that changed since the version you
-are running.
+See everything that changed since the version you are running.
 
-Closed, it says only that an update exists and gives its number. A **What's
-new** button opens the release notes for every version published since yours —
-not only the newest one — so someone several versions behind can see all of it
-and decide whether the update is worth the interruption. The button closes it
-again, and the notes are fetched only when it is opened.
+- New: a What's new button opens the release notes for every version published since yours, not only the newest one
+- Closed, the notice says only that an update exists and gives its number
+- The notes are fetched when the button is opened, so startup is not delayed
 
 ## 2.0.2
 
 The update prompt no longer cuts its own text off mid-sentence.
 
-It shows the first line of the release notes, shortened with an ellipsis to
-whatever the window is wide enough for, and the notes in full when the pointer
-rests on them.
+- Fixed: the note beside the version ran past the edge of the window
+- It now shows the first line of the release notes, shortened to the width available
+- The notes in full appear when the pointer rests on them
 
 ## 2.0.1
 
-The update prompt now downloads the new version directly when you click it,
-rather than opening a page first.
+The update prompt downloads the new version directly.
+
+- Clicking it starts the download instead of opening a page first
 
 ## 2.0.0
 
-
 First public release.
 
-When the wizard checks for updates and finds it is already the newest version,
-the line along the bottom ends "- latest". If it cannot reach GitHub it says
-nothing rather than claiming to be up to date.
+- Installs ArcGIS Pro with the prerequisites that version needs and any patches you have, in the order Esri intends
+- Checks what is already on the computer and skips whatever is already correct
+- Stops the installation if the computer cannot run the version chosen, and names the version that would work instead
+- Applies only the patches that belong to the version being installed
+- Optional components - Create Locator, Semantic Search, Tool Suggestions - can be turned on before installing
+- Checks for a newer wizard at startup; the line along the bottom ends "latest" when it is current, and says nothing at all when GitHub cannot be reached
 
 ## 1.16.0
 
