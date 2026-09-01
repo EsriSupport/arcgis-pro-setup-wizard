@@ -9,6 +9,20 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.1.2
+
+The Install button is no longer offered when there is nothing to install.
+
+Where ArcGIS Pro and everything it needs are already on the computer, Install
+is now unavailable and the reason is written beside it — "ArcGIS Pro 3.7 is
+already installed. Tick the box to install it again." Pressing it used to be
+allowed, and answered with a message box saying there was nothing to do. The
+summary now describes the reinstall too, instead of still reporting that
+nothing is left to install.
+
+The note along the bottom of the window also widens with the window, so a
+longer message is no longer cut short.
+
 ## 2.1.1
 
 Appearance fixes on the "Before installing" screen and the update notice.
