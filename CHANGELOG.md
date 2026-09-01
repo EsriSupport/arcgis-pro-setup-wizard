@@ -9,6 +9,26 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.7
+
+Files belonging to an ArcGIS Pro extension are no longer mistaken for ArcGIS
+Pro's own.
+
+Esri names an add-on after the product it extends, so Reality Studio arrives as
+`ArcGISPro_34_Reality_Ext_192545.exe` with a patch called
+`ArcGISPro_341_Reality_Ext_192546.msp`. The wizard was offering that setup as a
+version of ArcGIS Pro to install, and offering its patch **whatever** version
+you chose — it could not read a version out of a name in that shape, and a
+patch with no version was treated as belonging to all of them.
+
+The rule now is that ArcGIS Pro's own files carry nothing after the name but a
+version and a build number. A word in there means the file belongs to something
+else, so it is left out — and the note beneath the patch list says one was left
+out, rather than dropping it in silence.
+
+The check that a patch belongs to the version being installed is now made where
+the installation plan is built, as well as on the page that lists them.
+
 ## 2.2.6
 
 Findings from a second pass over every screen.
