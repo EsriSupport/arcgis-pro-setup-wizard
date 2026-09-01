@@ -9,6 +9,21 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.1.1
+
+Appearance fixes on the "Before installing" screen and the update notice.
+
+The table of checks had no top border: the message above it was tall enough to
+cover it. The download button now sizes itself to what it says, so a caption
+like "Download .NET 6.0 (x64)" no longer wraps across two lines inside it. The
+update notice no longer repeats which version you are running — that is already
+along the bottom of every screen — and its buttons now sit level with the text
+whether the notes are open or closed. Release notes that were hard-wrapped when
+they were written are re-flowed to the width of the panel instead of breaking
+mid-sentence, and each version's notes are now indented as a block beneath the
+version number — wrapped lines included — with the version itself in bold, so
+the two can be told apart at a glance.
+
 ## 2.1.0
 
 The update notice can now show everything that changed since the version you
