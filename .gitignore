@@ -1,0 +1,8 @@
+# Nothing built or local belongs in this repository.
+*.exe
+*.zip
+*.ico
+*.png
+bin/
+obj/
+src/
