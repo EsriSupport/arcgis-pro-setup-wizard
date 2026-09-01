@@ -9,6 +9,15 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.2
+
+The arrow on the release notes button now points the way the panel moves.
+
+The notice sits at the bottom of the window and grows upward, so **What's new**
+carries an up arrow and **Hide notes** a down one — the way a drawer handle
+works. It had them the other way round, following the convention for a panel
+that drops its content below the button, which is not what this one does.
+
 ## 2.2.1
 
 The release notes panel was the one screen the design pass missed.
