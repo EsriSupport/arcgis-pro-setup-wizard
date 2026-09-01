@@ -9,6 +9,21 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.4
+
+Patches the computer already has are no longer applied a second time.
+
+ArcGIS Pro records its patch level in its own version: 3.7.1.1904 means patch
+3.7.1 went on long ago. The wizard was offering that patch again anyway,
+costing twenty minutes and ending in "not applicable". Where the base
+installation is being skipped because the right version is already there, any
+patch the installed version already covers is now skipped too, and the row says
+so.
+
+Newer patches are unaffected — a 3.7.2 patch still goes on over 3.7.1. Ticking
+the box that reinstalls ArcGIS Pro puts the base version back and every patch
+with it, which is the way to apply one again deliberately.
+
 ## 2.2.3
 
 Cancel and Escape now ask before throwing anything away.
