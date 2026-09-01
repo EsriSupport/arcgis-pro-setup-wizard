@@ -32,6 +32,23 @@ Optional ArcGIS Pro components — Create Locator, Semantic Search, Tool
 Suggestions — can be turned on before installing, so there is nothing to run
 afterwards.
 
+## Staying current
+
+On startup the wizard asks GitHub whether a newer version has been published.
+If there is one, the welcome screen says so; **What's new** opens the release
+notes for every version since the one you are running, and the download button
+fetches the new file directly. A computer with no internet is not delayed and
+is told nothing — the check fails quietly.
+
+Nothing is sent but the request itself: no identifiers, no machine details, no
+telemetry of any kind.
+
+## Keyboard
+
+The whole wizard can be driven without a mouse. **Enter** moves on, **Escape**
+cancels, and every button has an access key — hold **Alt** to see them
+underlined (Alt+N for Next, Alt+B for Back, Alt+R for Re-check).
+
 ## What you need
 
 - Windows 10 or 11, 64-bit

@@ -9,6 +9,15 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.1
+
+The release notes panel was the one screen the design pass missed.
+
+Paragraph breaks in the notes were being collapsed, so what should have been
+readable paragraphs arrived as a wall of text. The panel can now be reached and
+scrolled from the keyboard, **What's new** has an access key like every other
+button, and it shows whole lines rather than slicing one through the middle.
+
 ## 2.2.0
 
 A design pass over every screen.
