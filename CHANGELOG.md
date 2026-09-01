@@ -9,6 +9,19 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.9
+
+The What's new panel now understands a bulleted release note.
+
+It recognised the bullet characters markdown uses, but not the one people
+actually type — the round bullet an app store uses. A note written that way
+arrived as one long paragraph with the bullets swallowed into it. Round,
+middle and hollow bullets, en and em dashes all now start a line of their own.
+
+This matters from the next release onward, not this one: the panel is drawn by
+the version you are running, so notes are only read this way once the wizard
+doing the reading is 2.2.9 or later.
+
 ## 2.2.8
 
 The patch list is now as tall as the patches in it. It was sized before the
