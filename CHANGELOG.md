@@ -9,6 +9,17 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.1.0
+
+The update notice can now show everything that changed since the version you
+are running.
+
+Closed, it says only that an update exists and gives its number. A **What's
+new** button opens the release notes for every version published since yours —
+not only the newest one — so someone several versions behind can see all of it
+and decide whether the update is worth the interruption. The button closes it
+again, and the notes are fetched only when it is opened.
+
 ## 2.0.2
 
 The update prompt no longer cuts its own text off mid-sentence.
