@@ -9,6 +9,14 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.0.2
+
+The update prompt no longer cuts its own text off mid-sentence.
+
+It shows the first line of the release notes, shortened with an ellipsis to
+whatever the window is wide enough for, and the notes in full when the pointer
+rests on them.
+
 ## 2.0.1
 
 The update prompt now downloads the new version directly when you click it,
