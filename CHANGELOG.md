@@ -9,6 +9,22 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.6
+
+Findings from a second pass over every screen.
+
+The last screen, after a preview run, told you to "run this app again as
+Administrator with the preview box unticked" — a checkbox removed from the
+wizard some time ago. It now says what is actually true: start it again and
+choose Yes when Windows asks for permission.
+
+The components window has caught up with the rest of the app: its title bar is
+Esri blue rather than whatever accent colour the computer is set to, it no
+longer carries a stray icon, and a component's description is written in the
+ordinary text colour instead of the blue that means "you can click this".
+
+The update button is the last one in the wizard to gain an access key.
+
 ## 2.2.5
 
 Installing an earlier ArcGIS Pro over a later one is now stopped rather than
