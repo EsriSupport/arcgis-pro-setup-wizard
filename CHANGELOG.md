@@ -9,6 +9,26 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.2.3
+
+Cancel and Escape now ask before throwing anything away.
+
+Once past the welcome screen, closing the wizard — by the Cancel button, by
+Escape, by the window's X, or by Alt+F4 — asks first, with **No** as the
+default. Escape in particular is a key people press to dismiss things, and
+since 2.2.0 it has been able to close the wizard; it should not have been able
+to discard a chosen folder, patches and components without a word. The welcome
+screen still closes without asking, because nothing has been chosen there yet.
+
+Nothing changes during an installation: that was already protected, and still
+is. Stop asks for confirmation, waits for the current step to finish, and
+closing the window outright is refused.
+
+**Fixed:** in the components window, "Use standard" wrote straight through to
+the selection, so opening it, pressing that, and then pressing Cancel changed
+the components anyway. Nothing leaves that window now except through **Use
+these components**.
+
 ## 2.2.2
 
 The arrow on the release notes button now points the way the panel moves.
