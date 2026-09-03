@@ -9,6 +9,22 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.3.0
+
+Searching a whole drive, and a clearer way to choose between what it finds.
+
+- New: searching a large folder no longer freezes the window. A panel shows the folders counted so far and where it has reached, with a Stop button
+- New: while a search runs, the folder box shows the folder being searched and the folder row is unavailable - Stop is the way to search somewhere else
+- New: setup files show where they came from, so identical copies in different folders can be told apart
+- The list of setup files is a table with columns for the version, the file and its location, replacing a dropdown that covered the page beneath it and could show only one at a time
+- Fixed: Windows keeps its own cached .msp files, and those were being read as ArcGIS Pro patches - one was reported as "ArcGIS Pro 7.2.8", a version that does not exist
+- Fixed: the same patch found in several folders was queued once for each copy, so it was applied several times over; only the first is used and the rest are counted
+- Fixed: a horizontal scrollbar appeared under the setup table for no reason and went away when used
+- Fixed: scrolling the setup table and then choosing a row could leave the table showing an empty box
+- The patch list is hidden when no setup file has been chosen, since there is nothing for patches to go on
+- The summary counts what was found - "9 found - choose one below", "6 of 14 apply to ArcGIS Pro 3.5" - and no longer repeats what the table below already says
+- The note under the patch list is one line; what was left out, and why, is on the summary row
+
 ## 2.2.9
 
 The What's new panel understands a bulleted release note.
