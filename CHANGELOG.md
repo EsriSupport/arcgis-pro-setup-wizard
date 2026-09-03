@@ -9,6 +9,21 @@ of every screen — quote the whole line when contacting support.
 
 ---
 
+## 2.4.0
+
+Setup files the wizard cannot put a version to are no longer offered.
+
+- A search of a whole drive listed files as "Version unknown" and offered them as versions to install. Without a version there is nothing to check this computer against and no way to tell which patches belong to it, so such a file is no longer listed
+- The ArcGISPro.exe of an ArcGIS Pro that is already installed is the program itself, not a setup. It is passed over without comment, since every computer with ArcGIS Pro on it has one
+- New: a setup file that OneDrive is keeping online only is named, with what to do about it. Its contents are still in the cloud, and reading one during a search would pull gigabytes down
+- New: an .msi that cannot be read is named too, rather than shown as having no version
+- "Browse for file..." now says why a file cannot be used instead of accepting it and carrying on
+- A version written out in a filename is read as well as Esri's own form, so a download renamed "ArcGISPro 3.7.exe" is recognised
+- Fixed: every prompt the wizard raises now wears the wizard's own title bar; several still showed the Windows accent colour
+- Fixed: the percentage on the installing screen sat beside the name of the step while the bar under it showed the whole run, so "99%" could appear above a bar barely started
+- Fixed: waiting for a setup file to extract wrote the same line to the log up to ten times
+- The summary of what was found is no longer a stop on the way round the page with the keyboard, since there is nothing to do in it
+
 ## 2.3.0
 
 Searching a whole drive, and a clearer way to choose between what it finds.
